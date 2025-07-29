@@ -1,10 +1,10 @@
-package com.smartparking.app;
+package org.smartparking.eureka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SmartparkingappApplicationTests {
+class MsEurekaApplicationTests {
 
 	@Test
 	void contextLoads() {
