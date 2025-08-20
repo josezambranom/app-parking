@@ -1,0 +1,29 @@
+server:
+  port: ${PORT:8083}
+        
+## Classic Eureka configuration
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ${HOSTNAME:localhost}
+    lower-case-service-id: true
+
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
+      
+
+## Enable service discovery (with Eureka)
+## lower-case-service-id is mandatory, otherwise is retrieved in upper case from Eureka
+spring:
+  application:
+    name: ms-simulacion
+    data:
+    mongodb:
+      uri: mongodb://localhost:27017/Simulacion
+
+plazas:
+  service:
+    url: http://microservice-plazas/api/aparcamiento/plazas

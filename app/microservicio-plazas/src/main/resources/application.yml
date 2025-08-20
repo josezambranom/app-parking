@@ -1,0 +1,17 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: microservicio-plazas
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/Aparcamientos
+
+eureka:
+  instance:
+    hostname: localhost
+    lower-case-service-id: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
